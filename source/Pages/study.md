@@ -1,14 +1,13 @@
 # Sphinx
 
 
-test 
+
 
 生成新网页:.\make clean + .\make html
 
 更新目录：在source/index.rst 中增加
 
-test
-是的
+
 ``` 
 两个点..+空格+后面的文本，代表注释（网页上不显示）
 等号线====+上一行的文本，代表一级标题
@@ -34,7 +33,7 @@ git push
 ![imagefilename](/_static/git.png)
 
 
-##搭建过程
+## 搭建过程
 
 ##预览
 sphinx-autobuild source build/html 
