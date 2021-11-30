@@ -12,6 +12,7 @@ Welcome to Amen's documentation!
 
    Pages/study
 
+
 Indices and tables
 ==================
 
