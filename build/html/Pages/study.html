@@ -62,7 +62,7 @@
 
   </head>
   <body dir=ltr
-        data-md-color-primary=orange data-md-color-accent=light-blue>
+        data-md-color-primary=deep-purple data-md-color-accent=deep-purple>
   
   <svg class="md-svg">
     <defs data-children-count="0">
@@ -220,13 +220,72 @@
       
         
 <nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
   <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#pages-study--page-root" class="md-nav__link">Sphinx</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#id1" class="md-nav__link">本地实时预览</a>
+        </li>
+        <li class="md-nav__item"><a href="#id2" class="md-nav__link">修改本地仓库，生成新网页:</a>
+        </li>
+        <li class="md-nav__item"><a href="#github" class="md-nav__link">修改远程仓库，上传代码到<em>github</em></a>
+        </li>
+        <li class="md-nav__item"><a href="#markdown" class="md-nav__link">markdown:</a>
+        </li>
+        <li class="md-nav__item"><a href="#id3" class="md-nav__link">定制</a>
+        </li>
+        <li class="md-nav__item"><a href="#sphinx-github" class="md-nav__link">搭建sphinx+github过程</a>
+        </li></ul>
+            </nav>
+        </li>
     
 <li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/Pages/study.md.txt">Show Source</a> </li>
 
   </ul>
 </nav>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="#id1" class="md-nav__link">本地实时预览</a>
       
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#id2" class="md-nav__link">修改本地仓库，生成新网页:</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#github" class="md-nav__link">修改远程仓库，上传代码到<em>github</em></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#markdown" class="md-nav__link">markdown:</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#id3" class="md-nav__link">定制</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#sphinx-github" class="md-nav__link">搭建sphinx+github过程</a>
+      
+    
+    </li></ul>
     
     </li>
   </ul>
@@ -241,7 +300,24 @@
               <div class="md-sidebar__inner">
                 
 <nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
   <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#pages-study--page-root" class="md-nav__link">Sphinx</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#id1" class="md-nav__link">本地实时预览</a>
+        </li>
+        <li class="md-nav__item"><a href="#id2" class="md-nav__link">修改本地仓库，生成新网页:</a>
+        </li>
+        <li class="md-nav__item"><a href="#github" class="md-nav__link">修改远程仓库，上传代码到<em>github</em></a>
+        </li>
+        <li class="md-nav__item"><a href="#markdown" class="md-nav__link">markdown:</a>
+        </li>
+        <li class="md-nav__item"><a href="#id3" class="md-nav__link">定制</a>
+        </li>
+        <li class="md-nav__item"><a href="#sphinx-github" class="md-nav__link">搭建sphinx+github过程</a>
+        </li></ul>
+            </nav>
+        </li>
     
 <li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/Pages/study.md.txt">Show Source</a> </li>
 
@@ -258,21 +334,22 @@
             
   <section class="tex2jax_ignore mathjax_ignore" id="sphinx">
 <h1 id="pages-study--page-root">Sphinx<a class="headerlink" href="#pages-study--page-root" title="Permalink to this headline">¶</a></h1>
-<p>test</p>
-<p>生成新网页:.\make clean + .\make html</p>
-<p>更新目录：在source/index.rst 中增加</p>
-<p>test
-是的</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>两个点..+空格+后面的文本，代表注释（网页上不显示）
-等号线====+上一行的文本，代表一级标题
-.. toctree::声明的一个树状结构（Table of Content Tree）
-:maxdepth: 2 表示页面的级数最多显示两级
-:caption: Contents: 用于指定标题文本（可以不要）
-最下面的3行是索引和搜索链接（可以先不用管）
+<section id="id1">
+<h2 id="id1">本地实时预览<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">autobuild</span> <span class="n">source</span> <span class="n">build</span><span class="o">/</span><span class="n">html</span> 
 </pre></div>
 </div>
-<p>上传代码到github
-在git bash中：</p>
+</section>
+<section id="id2">
+<h2 id="id2">修改本地仓库，生成新网页:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span>\<span class="n">make</span> <span class="n">clean</span> 
+<span class="o">.</span>\<span class="n">make</span> <span class="n">html</span>
+</pre></div>
+</div>
+</section>
+<section id="github">
+<h2 id="github">修改远程仓库，上传代码到<em>github</em><a class="headerlink" href="#github" title="Permalink to this headline">¶</a></h2>
+<p>在<strong>git bash</strong>中：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="n">docs</span><span class="o">/**</span>
 <span class="n">touch</span> <span class="n">docs</span><span class="o">/.</span><span class="n">nojekyll</span>
 <span class="n">cp</span> <span class="o">-</span><span class="n">r</span> <span class="n">build</span><span class="o">/</span><span class="n">html</span><span class="o">/*</span> <span class="n">docs</span><span class="o">/</span>
@@ -284,18 +361,77 @@
 </pre></div>
 </div>
 <p><img alt="imagefilename" src="../_images/git.png"/></p>
-<p>##搭建过程</p>
-<p>##预览
-sphinx-autobuild source build/html</p>
-<p>##插入图片
-把图片放入source/static</p>
+</section>
+<hr class="docutils"/>
+<section id="markdown">
+<h2 id="markdown">markdown:<a class="headerlink" href="#markdown" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.markdownguide.org/basic-syntax/">https://www.markdownguide.org/basic-syntax/</a></p>
+<p><a class="reference external" href="https://www.markdown.xyz/basic-syntax/#paragraphs">中文版</a></p>
+<ol>
+<li><p>插入图片</p>
+<p>把图片放入source/static</p>
+</li>
+</ol>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>![imagefilename](/_static/.....)
 </pre></div>
 </div>
-<p>markdown:
-https://www.markdownguide.org/basic-syntax/</p>
-<p>##定制
-https://sphinx-themes.org/sample-sites/mozilla-sphinx-theme/kitchen-sink/</p>
+<ol class="simple">
+<li><p>块引用</p></li>
+</ol>
+<blockquote>
+<div><p>在段落前加&gt;</p>
+<ul class="simple">
+<li><p>要换行，也要输入&gt;</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>嵌套块就多输入&gt;&gt;</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>要嵌套多少层就多输入几个&gt;</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<ol>
+<li><p>代码块</p>
+<p>单对反引号是字<code class="docutils literal notranslate"><span class="pre">code</span></code></p>
+</li>
+<li><p>分割线—</p></li>
+</ol>
+</section>
+<hr class="docutils"/>
+<section id="id3">
+<h2 id="id3">定制<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://bashtage.github.io/sphinx-material/">https://bashtage.github.io/sphinx-material/</a></p>
+<p>icon:
+<a class="reference external" href="https://fonts.google.com/icons">https://fonts.google.com/icons</a></p>
+</section>
+<section id="sphinx-github">
+<h2 id="sphinx-github">搭建sphinx+github过程<a class="headerlink" href="#sphinx-github" title="Permalink to this headline">¶</a></h2>
+<p>[https://www.bilibili.com/video/BV1EE411N7Bi?p=1]（https://www.bilibili.com/video/BV1EE411N7Bi?p=1）</p>
+<ol class="simple">
+<li><p>安装python</p></li>
+<li><p>安装sphinx</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx</span>
+</pre></div>
+</div>
+<p>创建新的文件夹，cmd进入当前文件夹，输入：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">quickstart</span>
+</pre></div>
+</div>
+<p>此时build 文件夹下面是空的，执行 make html，可以打开index.html</p>
+<p>实时查看不按照教程里的live-server,而是直接使用sphinx-autobuild</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#install</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx</span><span class="o">-</span><span class="n">autobuild</span>
+
+<span class="c1">#usage</span>
+<span class="n">sphinx</span><span class="o">-</span><span class="n">autobuild</span> <span class="n">source</span> <span class="n">build</span><span class="o">/</span><span class="n">html</span>
+</pre></div>
+</div>
+</section>
 </section>
 
 

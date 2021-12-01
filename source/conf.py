@@ -69,8 +69,8 @@ html_theme_options = {
     'base_url': 'https://lydia-tar.github.io/Blog/',
 
     # Set the color and the accent color
-    'color_primary': 'orange',
-    'color_accent': 'light-blue',
+    'color_primary': 'deep-purple',
+    'color_accent': 'deep-purple',
 
     # Set the repo location to get a badge with stats
     'repo_url': 'https://github.com/Lydia-tar/Blog',

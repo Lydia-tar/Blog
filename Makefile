@@ -21,8 +21,8 @@ help:
 
 .PHONY: github
 github:
- 	rm -rf docs/*
- 	# @rm -rf build/*
- 	# @make html
-	# @cp -a build/html/. docs/
+ 	@rm -rf docs/*
+ 	@rm -rf build/*
+ 	@make html
+	@cp -a build/html/. docs/
 		
