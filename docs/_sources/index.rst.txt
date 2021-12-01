@@ -11,6 +11,7 @@ Welcome to Amen's documentation!
    :caption: Contents:
 
    Pages/study
+   Pages/Database
 
 
 Indices and tables

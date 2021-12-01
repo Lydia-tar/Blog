@@ -29,6 +29,26 @@ git push
 
 ---
 
+## Math
+$ x^3+\log_2(3) $ 
+```
+$ x^3 $
+```
+
+$$ \frac{x}{2y} +\frac{x-y}{x+y} $$
+```
+$$ \frac{x}{2y} +\frac{x-y}{x+y} $$
+```
+
+$\tan$、$\sin$、$\cos$、$\lg$、$\arcsin$、$\arctan$、$\min$、$\max$、$\exp$、$\log$
+
+```
+$\tan$、$\sin$、$\cos$、$\lg$、$\arcsin$、$\arctan$、$\min$、$\max$、$\exp$、$\log$
+```
+
+
+
+
 ## markdown:
 
 [https://www.markdownguide.org/basic-syntax/](https://www.markdownguide.org/basic-syntax/)
