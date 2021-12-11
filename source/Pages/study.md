@@ -30,7 +30,7 @@ git push
 ---
 
 ## Math
-$ x^3+\log_2(3) $ 
+$ x^3+\log_2(3)  +4 \times 3 $
 ```
 $ x^3 $
 ```
@@ -38,6 +38,13 @@ $ x^3 $
 $$ \frac{x}{2y} +\frac{x-y}{x+y} $$
 ```
 $$ \frac{x}{2y} +\frac{x-y}{x+y} $$
+```
+
+matrix
+
+$ [\begin{matrix} 1 & 2 \\ 4 & 5 \end{matrix} ]$
+```
+$ [\begin{matrix} 1 & 2 \\ 4 & 5 \end{matrix} ] $
 ```
 
 $\tan$、$\sin$、$\cos$、$\lg$、$\arcsin$、$\arctan$、$\min$、$\max$、$\exp$、$\log$

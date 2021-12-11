@@ -8,10 +8,12 @@ Welcome to Amen's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
-   Pages/study
-   Pages/Database
+
+   Pages/Database.md
+   Pages/study.md
+   Pages/PatternRCG.md
+
 
 
 Indices and tables
