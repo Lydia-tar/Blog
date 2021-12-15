@@ -30,7 +30,8 @@ author = 'Ruth'
 # ones.
 extensions = [
     'myst_parser',
-    'sphinx.ext.githubpages'
+    'sphinx.ext.githubpages',
+    'nbsphinx',
 ]
 source_suffix = {
     '.rst': 'restructuredtext',

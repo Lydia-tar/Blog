@@ -54,11 +54,13 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Sphinx" href="study.html" />
+    <link rel="next" title="scikit-learn (sklearn) 学习" href="sklearn.html" />
+    <link rel="prev" title="Welcome to Amen’s documentation!" href="../index.html" />
   
    
 
@@ -210,6 +212,166 @@
     <li class="md-nav__item">
     
     
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <label class="md-nav__link md-nav__link--active" for="__toc"> Pattern recognition </label>
+    
+      <a href="#" class="md-nav__link md-nav__link--active">Pattern recognition</a>
+      
+        
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#pages-patternrcg--page-root" class="md-nav__link">Pattern recognition</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#python-mat" class="md-nav__link">python 读取 .mat 文件</a>
+        </li>
+        <li class="md-nav__item"><a href="#salinas-dataset" class="md-nav__link">Salinas dataset</a>
+        </li>
+        <li class="md-nav__item"><a href="#adaboost" class="md-nav__link">AdaBoost</a>
+        </li>
+        <li class="md-nav__item"><a href="#pca" class="md-nav__link">PCA 降维</a>
+        </li>
+        <li class="md-nav__item"><a href="#unsupervised-learning" class="md-nav__link">无监督学习 （ unsupervised learning)</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#id1" class="md-nav__link">聚类方法</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#id2" class="md-nav__link">基本概念</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#distance-similarity" class="md-nav__link">样本之间的距离（distance）或相似度（similarity）</a>
+        </li>
+        <li class="md-nav__item"><a href="#cluster" class="md-nav__link">类或簇 （cluster）</a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/Pages/PatternRCG.md.txt">Show Source</a> </li>
+
+  </ul>
+</nav>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="#python-mat" class="md-nav__link">python 读取 .mat 文件</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#salinas-dataset" class="md-nav__link">Salinas dataset</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#adaboost" class="md-nav__link">AdaBoost</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#pca" class="md-nav__link">PCA 降维</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#unsupervised-learning" class="md-nav__link">无监督学习 （ unsupervised learning)</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="#id1" class="md-nav__link">聚类方法</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="sklearn.html" class="md-nav__link">scikit-learn (sklearn) 学习</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="sklearn.html#线性回归与逻辑回归" class="md-nav__link">线性回归与逻辑回归</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="sklearn.html#Linear-regression" class="md-nav__link">Linear regression</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="sklearn.html#支持向量机" class="md-nav__link">支持向量机</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="sklearn.html#贝叶斯" class="md-nav__link">贝叶斯</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="sklearn.html#决策树" class="md-nav__link">决策树</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="sklearn.html#k均值聚类" class="md-nav__link">k均值聚类</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="sklearn.html#主成分分析" class="md-nav__link">主成分分析</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="sklearn.html#集成学习" class="md-nav__link">集成学习</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="sklearn.html#可视化总结" class="md-nav__link">可视化总结</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
       <a href="Database.html" class="md-nav__link">Database</a>
       <ul class="md-nav__list"> 
     <li class="md-nav__item">
@@ -347,69 +509,6 @@
     </li></ul>
     
     </li>
-    <li class="md-nav__item">
-    
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    <label class="md-nav__link md-nav__link--active" for="__toc"> Pattern recognition </label>
-    
-      <a href="#" class="md-nav__link md-nav__link--active">Pattern recognition</a>
-      
-        
-<nav class="md-nav md-nav--secondary">
-    <label class="md-nav__title" for="__toc">Contents</label>
-  <ul class="md-nav__list" data-md-scrollfix="">
-        <li class="md-nav__item"><a href="#pages-patternrcg--page-root" class="md-nav__link">Pattern recognition</a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#python-mat" class="md-nav__link">python 读取 .mat 文件</a>
-        </li>
-        <li class="md-nav__item"><a href="#unsupervised-learning" class="md-nav__link">无监督学习 （ unsupervised learning)</a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#id1" class="md-nav__link">聚类方法</a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#id2" class="md-nav__link">基本概念</a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#distance-similarity" class="md-nav__link">样本之间的距离（distance）或相似度（similarity）</a>
-        </li>
-        <li class="md-nav__item"><a href="#cluster" class="md-nav__link">类或簇 （cluster）</a>
-        </li></ul>
-            </nav>
-        </li></ul>
-            </nav>
-        </li></ul>
-            </nav>
-        </li></ul>
-            </nav>
-        </li>
-    
-<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/Pages/PatternRCG.md.txt">Show Source</a> </li>
-
-  </ul>
-</nav>
-      <ul class="md-nav__list"> 
-    <li class="md-nav__item">
-    
-    
-      <a href="#python-mat" class="md-nav__link">python 读取 .mat 文件</a>
-      
-    
-    </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="#unsupervised-learning" class="md-nav__link">无监督学习 （ unsupervised learning)</a>
-      <ul class="md-nav__list"> 
-    <li class="md-nav__item">
-    
-    
-      <a href="#id1" class="md-nav__link">聚类方法</a>
-      
-    
-    </li></ul>
-    
-    </li></ul>
-    
-    </li>
   </ul>
   
 
@@ -427,6 +526,12 @@
         <li class="md-nav__item"><a href="#pages-patternrcg--page-root" class="md-nav__link">Pattern recognition</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#python-mat" class="md-nav__link">python 读取 .mat 文件</a>
+        </li>
+        <li class="md-nav__item"><a href="#salinas-dataset" class="md-nav__link">Salinas dataset</a>
+        </li>
+        <li class="md-nav__item"><a href="#adaboost" class="md-nav__link">AdaBoost</a>
+        </li>
+        <li class="md-nav__item"><a href="#pca" class="md-nav__link">PCA 降维</a>
         </li>
         <li class="md-nav__item"><a href="#unsupervised-learning" class="md-nav__link">无监督学习 （ unsupervised learning)</a><nav class="md-nav">
               <ul class="md-nav__list">
@@ -473,6 +578,21 @@
 </pre></div>
 </div>
 </section>
+<section id="salinas-dataset">
+<h2 id="salinas-dataset">Salinas dataset<a class="headerlink" href="#salinas-dataset" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="adaboost">
+<h2 id="adaboost">AdaBoost<a class="headerlink" href="#adaboost" title="Permalink to this headline">¶</a></h2>
+<p>AdaBoost是非概率模型（<span class="math notranslate nohighlight">\(z = g(x)\)</span>),也是非线性模型，非参数化模型。</p>
+<p>模型：决策函数</p>
+<p>策略：</p>
+<p>算法：algorithm： 可选参数，默认为SAMME.R。scikit-learn实现了两种Adaboost分类算法，SAMME和SAMME.R。两者的主要区别是弱学习器权重的度量，SAMME使用对样本集分类效果作为弱学习器权重，而SAMME.R使用了对样本集分类的预测概率大小来作为弱学习器权重。由于SAMME.R使用了概率度量的连续值，迭代一般比SAMME快，因此AdaBoostClassifier的默认算法algorithm的值也是SAMME.R。我们一般使用默认的SAMME.R就够了，该算法采用加权概率估计（weighted probability estimates）的方法更新加法模型</p>
+<p>约束优化问题</p>
+<p>默认是决策树，即AdaBoostClassifier默认使用CART分类树DecisionTreeClassifier，</p>
+</section>
+<section id="pca">
+<h2 id="pca">PCA 降维<a class="headerlink" href="#pca" title="Permalink to this headline">¶</a></h2>
+</section>
 <section id="unsupervised-learning">
 <h2 id="unsupervised-learning">无监督学习 （ unsupervised learning)<a class="headerlink" href="#unsupervised-learning" title="Permalink to this headline">¶</a></h2>
 <section id="id1">
@@ -513,7 +633,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
           
-            <a href="study.html" title="Sphinx"
+            <a href="../index.html" title="Welcome to Amen’s documentation!"
                class="md-flex md-footer-nav__link md-footer-nav__link--prev"
                rel="prev">
               <div class="md-flex__cell md-flex__cell--shrink">
@@ -522,10 +642,21 @@
               <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
                 <span class="md-flex__ellipsis">
                   <span
-                      class="md-footer-nav__direction"> Previous </span> Sphinx </span>
+                      class="md-footer-nav__direction"> Previous </span> Welcome to Amen’s documentation! </span>
               </div>
             </a>
           
+          
+            <a href="sklearn.html" title="scikit-learn (sklearn) 学习"
+               class="md-flex md-footer-nav__link md-footer-nav__link--next"
+               rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
+                class="md-flex__ellipsis"> <span
+                class="md-footer-nav__direction"> Next </span> scikit-learn (sklearn) 学习 </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink"><i
+                class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
           
         </a>
         

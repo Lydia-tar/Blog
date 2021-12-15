@@ -92,6 +92,7 @@ $\tan$、$\sin$、$\cos$、$\lg$、$\arcsin$、$\arctan$、$\min$、$\max$、$\e
 icon:
 [https://fonts.google.com/icons](https://fonts.google.com/icons)
 
+使用jupyter notebook写blog的插件：nbsphinx [nbsphinx](https://nbsphinx.readthedocs.io/en/0.8.7/)
 
 ## 搭建sphinx+github过程
 [https://www.bilibili.com/video/BV1EE411N7Bi?p=1]（https://www.bilibili.com/video/BV1EE411N7Bi?p=1）

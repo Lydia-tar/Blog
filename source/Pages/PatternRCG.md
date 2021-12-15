@@ -2,7 +2,7 @@
 
 k-means
 
-### python 读取 .mat 文件
+## python 读取 .mat 文件
 
 .mat数据格式是Matlab的数据存储的标准格式。在Matlab中主要使用load()函数导入一个mat文件，使用save()函数保存一个mat文件。
 
@@ -12,6 +12,24 @@ import scipy.io as scio
 dataFile = 'C://data.mat'
 data = scio.loadmat(dataFile) 
 ```
+
+## Salinas dataset
+
+## AdaBoost
+AdaBoost是非概率模型（$z = g(x)$),也是非线性模型，非参数化模型。
+
+模型：决策函数
+
+策略：
+
+算法：algorithm： 可选参数，默认为SAMME.R。scikit-learn实现了两种Adaboost分类算法，SAMME和SAMME.R。两者的主要区别是弱学习器权重的度量，SAMME使用对样本集分类效果作为弱学习器权重，而SAMME.R使用了对样本集分类的预测概率大小来作为弱学习器权重。由于SAMME.R使用了概率度量的连续值，迭代一般比SAMME快，因此AdaBoostClassifier的默认算法algorithm的值也是SAMME.R。我们一般使用默认的SAMME.R就够了，该算法采用加权概率估计（weighted probability estimates）的方法更新加法模型
+
+约束优化问题
+
+默认是决策树，即AdaBoostClassifier默认使用CART分类树DecisionTreeClassifier，
+
+## PCA 降维
+
 
 ## 无监督学习 （ unsupervised learning)
 
@@ -44,3 +62,4 @@ $
 层次聚类（hierarchical clustering）
 
 k均值聚类（k-means clustering）
+
