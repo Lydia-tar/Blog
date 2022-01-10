@@ -9,6 +9,7 @@ Welcome to Amen's documentation!
 .. toctree::
    :maxdepth: 2
 
+   Pages/learningC.md
    Pages/PatternRCG.md
    Pages/sklearn.ipynb
    Pages/salinas.ipynb

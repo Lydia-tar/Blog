@@ -1,6 +1,18 @@
 # Pattern recognition
 
-k-means
+
+## Bayesian Theory
+
+## Parametric estimation
+
+
+
+##  Nonparametric estimation
+
+##  Discriminant methods
+
+## Clustering
+
 
 ## python 读取 .mat 文件
 

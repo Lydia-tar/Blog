@@ -1,4 +1,4 @@
-# Sphinx
+# Sphinx + github
 
 
 ## 本地实时预览
@@ -29,7 +29,9 @@ git push
 
 ---
 
-## Math
+
+
+### Math
 $ x^3+\log_2(3)  +4 \times 3 $
 ```
 $ x^3 $
@@ -53,17 +55,19 @@ $\tan$、$\sin$、$\cos$、$\lg$、$\arcsin$、$\arctan$、$\min$、$\max$、$\e
 $\tan$、$\sin$、$\cos$、$\lg$、$\arcsin$、$\arctan$、$\min$、$\max$、$\exp$、$\log$
 ```
 
+ 属于：{} \in {}
+ ${y_i} \in {\mathbb {R}}$
 
 
 
-## markdown:
+### markdown:
 
 [https://www.markdownguide.org/basic-syntax/](https://www.markdownguide.org/basic-syntax/)
 
 [中文版](https://www.markdown.xyz/basic-syntax/#paragraphs)
 
 
-1. 插入图片
+1. 插入
 
     把图片放入source/static
 ```
@@ -85,7 +89,7 @@ $\tan$、$\sin$、$\cos$、$\lg$、$\arcsin$、$\arctan$、$\min$、$\max$、$\e
 
 ---
 
-## 定制
+### 定制
 
 [https://bashtage.github.io/sphinx-material/](https://bashtage.github.io/sphinx-material/)
 
@@ -94,7 +98,7 @@ icon:
 
 使用jupyter notebook写blog的插件：nbsphinx [nbsphinx](https://nbsphinx.readthedocs.io/en/0.8.7/)
 
-## 搭建sphinx+github过程
+### 搭建sphinx+github过程
 [https://www.bilibili.com/video/BV1EE411N7Bi?p=1]（https://www.bilibili.com/video/BV1EE411N7Bi?p=1）
 
 1. 安装python
