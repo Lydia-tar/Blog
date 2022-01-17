@@ -20,7 +20,7 @@ import os
 
 project = 'Amen'
 copyright = '2021, Ruth'
-author = 'Ruth'
+author = 'Amen'
 
 
 # -- General configuration ---------------------------------------------------
@@ -41,6 +41,7 @@ source_suffix = {
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
+
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
@@ -57,7 +58,7 @@ exclude_patterns = []
 
 html_theme = 'sphinx_material'
 
-html_theme = 'sphinx_material'
+
 
 # Material theme options (see theme.conf for more information)
 html_theme_options = {
@@ -80,7 +81,7 @@ html_theme_options = {
     'logo_icon': '&#xe897',
 
     # Visible levels of the global TOC; -1 means unlimited
-    'globaltoc_depth': 3,
+    'globaltoc_depth': 2,
     # If False, expand all TOC entries
     'globaltoc_collapse': False,
     # If True, show hidden TOC entries

@@ -1,0 +1,523 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
+
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
+
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="../_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="../_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="../_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>Pattern recognition &#8212; Amen  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/material.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="scikit-learn (sklearn) 学习" href="sklearn.html" />
+    <link rel="prev" title="Machine Learning" href="index.html" />
+  
+   
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=deep-purple data-md-color-accent=deep-purple>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+      
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#ML/PatternRCG" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../index.html" title="Amen  documentation"
+           class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">&#xe897</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          <span class="md-header-nav__topic">Amen</span>
+          <span class="md-header-nav__topic"> Pattern recognition </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="../search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder="Search"
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            <a href="https://github.com/Lydia-tar/Blog" title="Go to repository" class="md-source" data-md-source="github">
+
+    <div class="md-source__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="28" height="28">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Blog
+  </div>
+</a>
+          </div>
+        </div>
+      
+      
+  
+  <script src="../_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = "../"versions.json"",
+        target_loc = "../../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
+
+    </div>
+  </nav>
+</header>
+
+  
+  <div class="md-container">
+    
+    
+    
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">Amen  documentation</a></li>
+          <li class="md-tabs__item"><a href="index.html" class="md-tabs__link">Machine Learning</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../index.html" title="Amen documentation" class="md-nav__button md-logo">
+      
+        <i class="md-icon">&#xe897</i>
+      
+    </a>
+    <a href="../index.html"
+       title="Amen documentation">Amen</a>
+  </label>
+    <div class="md-nav__source">
+      <a href="https://github.com/Lydia-tar/Blog" title="Go to repository" class="md-source" data-md-source="github">
+
+    <div class="md-source__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="28" height="28">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Blog
+  </div>
+</a>
+    </div>
+  
+  
+
+  
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+    
+    
+      <a href="../basic/index.html" class="md-nav__link">数据结构与算法</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="../basic/learningC.html" class="md-nav__link">认识数据结构与算法</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="index.html" class="md-nav__link">Machine Learning</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <label class="md-nav__link md-nav__link--active" for="__toc"> Pattern recognition </label>
+    
+      <a href="#" class="md-nav__link md-nav__link--active">Pattern recognition</a>
+      
+        
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#ml-patternrcg--page-root" class="md-nav__link">Pattern recognition</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#bayesian-theory" class="md-nav__link">Bayesian Theory</a>
+        </li>
+        <li class="md-nav__item"><a href="#parametric-estimation" class="md-nav__link">Parametric estimation</a>
+        </li>
+        <li class="md-nav__item"><a href="#nonparametric-estimation" class="md-nav__link">Nonparametric estimation</a>
+        </li>
+        <li class="md-nav__item"><a href="#discriminant-methods" class="md-nav__link">Discriminant methods</a>
+        </li>
+        <li class="md-nav__item"><a href="#clustering" class="md-nav__link">Clustering</a>
+        </li>
+        <li class="md-nav__item"><a href="#python-mat" class="md-nav__link">python 读取 .mat 文件</a>
+        </li>
+        <li class="md-nav__item"><a href="#salinas-dataset" class="md-nav__link">Salinas dataset</a>
+        </li>
+        <li class="md-nav__item"><a href="#adaboost" class="md-nav__link">AdaBoost</a>
+        </li>
+        <li class="md-nav__item"><a href="#pca" class="md-nav__link">PCA 降维</a>
+        </li>
+        <li class="md-nav__item"><a href="#unsupervised-learning" class="md-nav__link">无监督学习 （ unsupervised learning)</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#id1" class="md-nav__link">聚类方法</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#id2" class="md-nav__link">基本概念</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#distance-similarity" class="md-nav__link">样本之间的距离（distance）或相似度（similarity）</a>
+        </li>
+        <li class="md-nav__item"><a href="#cluster" class="md-nav__link">类或簇 （cluster）</a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/ML/PatternRCG.md.txt">Show Source</a> </li>
+
+  </ul>
+</nav>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="sklearn.html" class="md-nav__link">scikit-learn (sklearn) 学习</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Database/index.html" class="md-nav__link">Database</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="../Database/Database.html" class="md-nav__link">Database</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../blog/index.html" class="md-nav__link">Blog</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="../blog/study.html" class="md-nav__link">Sphinx + github</a>
+      
+    
+    </li></ul>
+    
+    </li>
+  </ul>
+  
+
+</nav>
+              </div>
+            </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#ml-patternrcg--page-root" class="md-nav__link">Pattern recognition</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#bayesian-theory" class="md-nav__link">Bayesian Theory</a>
+        </li>
+        <li class="md-nav__item"><a href="#parametric-estimation" class="md-nav__link">Parametric estimation</a>
+        </li>
+        <li class="md-nav__item"><a href="#nonparametric-estimation" class="md-nav__link">Nonparametric estimation</a>
+        </li>
+        <li class="md-nav__item"><a href="#discriminant-methods" class="md-nav__link">Discriminant methods</a>
+        </li>
+        <li class="md-nav__item"><a href="#clustering" class="md-nav__link">Clustering</a>
+        </li>
+        <li class="md-nav__item"><a href="#python-mat" class="md-nav__link">python 读取 .mat 文件</a>
+        </li>
+        <li class="md-nav__item"><a href="#salinas-dataset" class="md-nav__link">Salinas dataset</a>
+        </li>
+        <li class="md-nav__item"><a href="#adaboost" class="md-nav__link">AdaBoost</a>
+        </li>
+        <li class="md-nav__item"><a href="#pca" class="md-nav__link">PCA 降维</a>
+        </li>
+        <li class="md-nav__item"><a href="#unsupervised-learning" class="md-nav__link">无监督学习 （ unsupervised learning)</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#id1" class="md-nav__link">聚类方法</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#id2" class="md-nav__link">基本概念</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#distance-similarity" class="md-nav__link">样本之间的距离（distance）或相似度（similarity）</a>
+        </li>
+        <li class="md-nav__item"><a href="#cluster" class="md-nav__link">类或簇 （cluster）</a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/ML/PatternRCG.md.txt">Show Source</a> </li>
+
+<li id="searchbox" class="md-nav__item"></li>
+
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+        
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
+  <section class="tex2jax_ignore mathjax_ignore" id="pattern-recognition">
+<h1 id="ml-patternrcg--page-root">Pattern recognition<a class="headerlink" href="#ml-patternrcg--page-root" title="Permalink to this headline">¶</a></h1>
+<section id="bayesian-theory">
+<h2 id="bayesian-theory">Bayesian Theory<a class="headerlink" href="#bayesian-theory" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="parametric-estimation">
+<h2 id="parametric-estimation">Parametric estimation<a class="headerlink" href="#parametric-estimation" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="nonparametric-estimation">
+<h2 id="nonparametric-estimation">Nonparametric estimation<a class="headerlink" href="#nonparametric-estimation" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="discriminant-methods">
+<h2 id="discriminant-methods">Discriminant methods<a class="headerlink" href="#discriminant-methods" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="clustering">
+<h2 id="clustering">Clustering<a class="headerlink" href="#clustering" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="python-mat">
+<h2 id="python-mat">python 读取 .mat 文件<a class="headerlink" href="#python-mat" title="Permalink to this headline">¶</a></h2>
+<p>.mat数据格式是Matlab的数据存储的标准格式。在Matlab中主要使用load()函数导入一个mat文件，使用save()函数保存一个mat文件。</p>
+<p>在python中,使用scipy.io, 读取出来的是字典。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.io</span> <span class="k">as</span> <span class="nn">scio</span> 
+<span class="n">dataFile</span> <span class="o">=</span> <span class="s1">'C://data.mat'</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">scio</span><span class="o">.</span><span class="n">loadmat</span><span class="p">(</span><span class="n">dataFile</span><span class="p">)</span> 
+</pre></div>
+</div>
+</section>
+<section id="salinas-dataset">
+<h2 id="salinas-dataset">Salinas dataset<a class="headerlink" href="#salinas-dataset" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="adaboost">
+<h2 id="adaboost">AdaBoost<a class="headerlink" href="#adaboost" title="Permalink to this headline">¶</a></h2>
+<p>AdaBoost是非概率模型（<span class="math notranslate nohighlight">\(z = g(x)\)</span>),也是非线性模型，非参数化模型。</p>
+<p>模型：决策函数</p>
+<p>策略：</p>
+<p>算法：algorithm： 可选参数，默认为SAMME.R。scikit-learn实现了两种Adaboost分类算法，SAMME和SAMME.R。两者的主要区别是弱学习器权重的度量，SAMME使用对样本集分类效果作为弱学习器权重，而SAMME.R使用了对样本集分类的预测概率大小来作为弱学习器权重。由于SAMME.R使用了概率度量的连续值，迭代一般比SAMME快，因此AdaBoostClassifier的默认算法algorithm的值也是SAMME.R。我们一般使用默认的SAMME.R就够了，该算法采用加权概率估计（weighted probability estimates）的方法更新加法模型</p>
+<p>约束优化问题</p>
+<p>默认是决策树，即AdaBoostClassifier默认使用CART分类树DecisionTreeClassifier，</p>
+</section>
+<section id="pca">
+<h2 id="pca">PCA 降维<a class="headerlink" href="#pca" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="unsupervised-learning">
+<h2 id="unsupervised-learning">无监督学习 （ unsupervised learning)<a class="headerlink" href="#unsupervised-learning" title="Permalink to this headline">¶</a></h2>
+<section id="id1">
+<h3 id="id1">聚类方法<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<section id="id2">
+<h4 id="id2">基本概念<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<section id="distance-similarity">
+<h5 id="distance-similarity">样本之间的距离（distance）或相似度（similarity）<a class="headerlink" href="#distance-similarity" title="Permalink to this headline">¶</a></h5>
+<p>样本集合 （假设有n个样本，每个样本有m个属性的特征向量组成，则可以用矩阵X表示）:
+<span class="math notranslate nohighlight">\(X=[X_{ij}]_{m \times n}= \left[ \begin{matrix} x_{11} &amp; x_{11} &amp; ... &amp; x_{1n} \\ x_{21} &amp; x_{22} &amp; ... &amp; x_{2n} \\ . &amp;. &amp;. &amp;. \\. &amp;. &amp;. &amp;. \\. &amp;. &amp;. &amp;. \\ x_{m1} &amp; x_{m2} &amp; ... &amp; x_{mn}\end{matrix} \right ]
+\)</span></p>
+<ol class="simple">
+<li><p>闵可夫斯基距离</p></li>
+<li><p>马哈拉诺比斯距离（Mahalanobis distance）</p></li>
+<li><p>相关系数 （correlation coefficient）</p></li>
+<li><p>夹角余弦 (cosine)</p></li>
+</ol>
+</section>
+<section id="cluster">
+<h5 id="cluster">类或簇 （cluster）<a class="headerlink" href="#cluster" title="Permalink to this headline">¶</a></h5>
+<p>通过聚类得到的类或簇，本质是样本的子集。如果一个聚类方法规定一个样本只能属于一个类，则是硬聚类方法（hard clustering）。反之，称为软聚类方法（soft clustering）。</p>
+<p>聚类算法</p>
+<p>层次聚类（hierarchical clustering）</p>
+<p>k均值聚类（k-means clustering）</p>
+</section>
+</section>
+</section>
+</section>
+</section>
+
+
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+            <a href="index.html" title="Machine Learning"
+               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+               rel="prev">
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              </div>
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span
+                      class="md-footer-nav__direction"> Previous </span> Machine Learning </span>
+              </div>
+            </a>
+          
+          
+            <a href="sklearn.html" title="scikit-learn (sklearn) 学习"
+               class="md-flex md-footer-nav__link md-footer-nav__link--next"
+               rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
+                class="md-flex__ellipsis"> <span
+                class="md-footer-nav__direction"> Next </span> scikit-learn (sklearn) 学习 </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink"><i
+                class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          
+        </a>
+        
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright 2021, Ruth.
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
+  </body>
+</html>
